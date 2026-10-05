@@ -4,19 +4,35 @@ build-backend = "hatchling.build"
 
 [project]
 name = "gpa_calculator_hlib_yeromin"
-version = "0.0.1"
+version = "1.0.0"
 authors = [
   { name="Hlib Yeromin", email="hyeromin@msudenver.edu" },
 ]
-description = "A small example package"
+description = "Credit-weighted GPA calculation library for letter-graded courses, from the CS3250 GPA Calculator project at MSU Denver."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["gpa", "grades", "education", "calculator", "flask"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+    "Intended Audience :: Education",
+    "Topic :: Education",
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/pypa/sampleproject"
-"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
+"Homepage" = "https://github.com/msu-denver/26FCS3250-002-prj-1"
+"Source" = "https://github.com/red-kaleena/26FCS3250-002-prj-1"
+"Bug Tracker" = "https://github.com/msu-denver/26FCS3250-002-prj-1/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["gpa_calculator"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/gpa_calculator",
+    "/README.md",
+    "/LICENSE",
+]

@@ -21,6 +21,7 @@
                     <td>{{ enrollment.course.credits }}</td>
                     <td>{{ enrollment.grade if enrollment.grade else '-' }}</td>
                     <td>
+                        <a href="{{ url_for('update_enrollment', course_prefix=enrollment.course.prefix, course_number=enrollment.course.number) }}" class="update_link">Edit</a>
                         <form action="{{ url_for('delete_enrollment', course_prefix=enrollment.course.prefix, course_number=enrollment.course.number) }}" method="POST" onsubmit="return confirm('Delete this enrollment?')">
                             {{ delete_form.hidden_tag() }}
                             {{ delete_form.submit(class_='delete_button') }}

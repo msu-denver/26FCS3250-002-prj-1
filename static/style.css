@@ -150,3 +150,15 @@ input[type="submit"] {
 .delete_button:hover {
     background: #b91c1c;
 }
+
+/* Update */
+
+.update_link {
+    color: #2563eb;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.update_link:hover {
+    color: #1d4ed8;
+}

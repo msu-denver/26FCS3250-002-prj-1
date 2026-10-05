@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block main %}
+        <h3>Update grade: {{ course.prefix }} {{ course.number }} - {{ course.name }} ({{ course.credits }} cr)</h3>
+        <form action="" method="POST" novalidate>
+            {{ form.hidden_tag() }}
+            <p>{{ form.grade.label }} <br> {{ form.grade() }}</p>
+            <p>{{ form.submit() }}</p>
+        </form>
+{% endblock %}
